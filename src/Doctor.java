@@ -1,6 +1,4 @@
 
-import java.awt.Color;
-
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -24,15 +22,13 @@ public class Doctor {
     
     public void move(int row, int col){
 //        Coordinate c = board.getClick();
-        
-        
-        
-        
-//        startRow = (int)(Math.random()*8);
-//        startCol = (int)(Math.random()*8);
 //        if(){
             
 //        }
+    }
+    
+    public void caught(){
+        
     }
     
     public int getRow(){
@@ -41,7 +37,5 @@ public class Doctor {
     
     public int getCol(){
         return this.col;
-    }
-    
-  
+    } 
 }

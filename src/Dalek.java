@@ -1,5 +1,4 @@
 
-import java.awt.Color;
 
 /*
  * To change this template, choose Tools | Templates
@@ -29,8 +28,8 @@ public class Dalek {
     }
     
     public void crash(){
-        
         hasCrashed = true;
+        System.out.println(hasCrashed);
         
     }
     
