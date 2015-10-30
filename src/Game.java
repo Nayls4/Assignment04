@@ -36,7 +36,7 @@ public class Game {
         
         int row = doc.getRow();
         int col = doc.getCol();
-        board.putPiece(row, col, Color.BLUE);
+        board.putPiece(row, col, Color.GREEN);
         
         int rowD1 = d1.getRow();
         int colD1 = d1.getCol();
@@ -50,13 +50,7 @@ public class Game {
         int colD3 = d3.getCol();
         board.putPiece(rowD3, colD3, Color.YELLOW);
             
-        Coordinate c = board.getClick();
-        //figure out where they clicked
-        rowD1 = c.getRow();
-        colD1 = c.getCol();
-        //put piece where clicked
-        board.putPiece(rowD1, colD1, Color.blue);
-        
+        while(true){
         
         //if 1 and 2 crash
         if(rowD1 == rowD2 && colD1 == colD2){
@@ -84,20 +78,39 @@ public class Game {
             d3.crash();
             board.removePiece(rowD1,colD1);
             board.removePiece(rowD3,colD3);
-            rowC3 = rowD1;
-            colC3 = colD1;
+            rowC3 = rowD3;
+            colC3 = colD3;
             board.putPiece(rowC3, colC3, Color.RED);
         }
         
-        if(rowD1 == row && colD1 == col || rowD2 == row && colD2 == col || rowD3 == row && colD3 == col || rowC1 == row && colC1 == col || rowC2 == row && colC2 == col || rowC3 == row && colC3 == col){
-            doc.caught();
-        }
-        
+//        if(rowD1 == row && colD1 == col || rowD2 == row && colD2 == col || rowD3 == row && colD3 == col || rowC1 == row && colC1 == col || rowC2 == row && colC2 == col || rowC3 == row && colC3 == col){
+//            doc.caught();
+//        }
+//        
         
         
 //        board.putPiece(row,col,Color.GREEN);
         
+//        while(true){
+        Coordinate c = board.getClick();
+            System.out.println(c.getCol() + "   " + c.getRow());
+            // || c.getCol() == col+1 || c.getRow() == row-1 || c.getCol() == col-1 
+        if(c.getRow() == row+1 && c.getCol() == col+1 || c.getRow() == row-1 && c.getCol() == col-1 || c.getRow() == row+1 && c.getCol() == col-1 || c.getRow() == row-1 && c.getCol() == col+1 || c.getRow() == row+1 || c.getRow() == row-1 || c.getCol() == col+1 || c.getCol() == col-1){
+//            System.out.println("row,col" + c.getCol() + "   " + c.getRow());
+            //remove old piece
+            board.removePiece(row, col);
+            //figure out where they clicked
+            row = c.getRow();
+            col = c.getCol();
+            //put piece where clicked
+            board.putPiece(row, col, Color.GREEN);
+        }else{
+            
+        }
         
         
+        
+        
+        }                        
     }
 }
