@@ -115,21 +115,22 @@ public class Game {
 
 
 
-            if(row-1 > rowD1){
+            if(row > rowD1){
                 //remove old piece                
                 board.removePiece(rowD1, colD1);
                 //figure out where they clicked
                 rowD1++;
                 //put piece where clicked
                 board.putPiece(rowD1, colD1, Color.YELLOW);
-            }else if(row-1 < rowD1){
+            }else if(row < rowD1){
                 //remove old piece                
                 board.removePiece(rowD1, colD1);
                 //figure out where they clicked
                 rowD1--;
                 //put piece where clicked
                 board.putPiece(rowD1, colD1, Color.YELLOW);
-            }else if(col > colD1){
+            }
+            if(col > colD1){
                 //remove old piece                
                 board.removePiece(rowD1, colD1);
                 //figure out where they clicked
@@ -143,6 +144,38 @@ public class Game {
                 colD1--;
                 //put piece where clicked
                 board.putPiece(rowD1, colD1, Color.YELLOW);
+            }
+            
+            
+            if(row > rowD2){
+                //remove old piece                
+                board.removePiece(rowD2, colD2);
+                //figure out where they clicked
+                rowD2++;
+                //put piece where clicked
+                board.putPiece(rowD2, colD2, Color.YELLOW);
+            }else if(row < rowD2){
+                //remove old piece                
+                board.removePiece(rowD2, colD2);
+                //figure out where they clicked
+                rowD2--;
+                //put piece where clicked
+                board.putPiece(rowD2, colD2, Color.YELLOW);
+            }
+            if(col > colD2){
+                //remove old piece                
+                board.removePiece(rowD2, colD2);
+                //figure out where they clicked
+                colD2++;
+                //put piece where clicked
+                board.putPiece(rowD2, colD2, Color.YELLOW);
+            }else if(col < colD2){
+                //remove old piece                
+                board.removePiece(rowD2, colD2);
+                //figure out where they clicked
+                colD2--;
+                //put piece where clicked
+                board.putPiece(rowD2, colD2, Color.YELLOW);
             }
             
             
