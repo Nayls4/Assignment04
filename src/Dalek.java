@@ -13,7 +13,7 @@ public class Dalek {
     
     private int row;
     private int col;
-    private boolean hasCrashed;
+    private boolean hasCrashed; 
 
     
     public Dalek(int startRow, int startCol){

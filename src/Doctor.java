@@ -9,7 +9,7 @@
  * @author naylj6470
  */
 public class Doctor {
-    private int row;
+    private int row; 
     private int col;
     
     

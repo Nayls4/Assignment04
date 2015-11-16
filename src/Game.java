@@ -11,7 +11,7 @@ import java.awt.Color;
  *
  * @author lamonta
  */
-
+ 
 public class Game {
 
     /**
@@ -32,7 +32,7 @@ public class Game {
         int rowC3 = 0;
         int colC1 = 0;
         int colC2 = 0;
-        int colC3 = 0;
+        int colC3 = 0; 
         
         int row = doc.getRow();
         int col = doc.getCol();
@@ -177,22 +177,6 @@ public class Game {
                 //put piece where clicked
                 board.putPiece(rowD2, colD2, Color.YELLOW);
             }
-            
-            
-            
-            
-            
-            
-//            if(row > d1.getRow() || row < d1.getRow()){
-//                System.out.println("yes");
-//                //remove old piece                
-//                board.removePiece(rowD1, colD1);
-//                //figure out where to move
-//                rowD1 = c.getRow();
-//                //colD1 = colD1++;
-//                //move Dalek
-//                board.putPiece(rowD1, colD1, Color.YELLOW); 
-//            }
         }    
     }
 }
